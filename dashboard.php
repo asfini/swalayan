@@ -97,7 +97,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Starter Pages
+                                    Master
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -105,13 +105,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Active Page</p>
+                                        <p>User</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Inactive Page</p>
+                                        <p>Pelanggan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Barang</p>
                                     </a>
                                 </li>
                             </ul>
@@ -120,7 +126,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Simple Link
+                                    Transaksi
                                     <span class="right badge badge-danger">New</span>
                                 </p>
                             </a>
@@ -156,8 +162,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <!-- /.col-md-6 -->
-                        <div class="col-lg-6">
+                        <!-- /.col-md-12 -->
+                        <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h5 class="m-0">Featured</h5>
@@ -170,21 +176,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
                             </div>
-
-                            <div class="card card-primary card-outline">
-                                <div class="card-header">
-                                    <h5 class="m-0">Featured</h5>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title">Special title treatment</h6>
-
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
                         </div>
-                        <!-- /.col-md-6 -->
+                        <!-- /.col-md-12 -->
                     </div>
                     <!-- /.row -->
                 </div><!-- /.container-fluid -->
