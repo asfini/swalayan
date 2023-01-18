@@ -1,3 +1,11 @@
+<?php
+error_reporting(0);
+session_start();
+if ($_SESSION['status'] == "login") {
+    header("location:admin.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

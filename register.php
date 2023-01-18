@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,7 @@
 <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="../../index2.html"><b>App</b> Swalayan </a>
+            <a href="#"><b>App</b> Swalayan </a>
         </div>
 
         <div class="card">
@@ -31,24 +32,15 @@
 
                 <?php 
                 include 'koneksi.php';
-                // mengambil data user dengan kode paling besar
-                $querykode = mysqli_query($koneksi, "SELECT max(id_user) as idterbesar FROM user");
+                $querykode = mysqli_query($koneksi, 
+                "SELECT max(id_user) as idterbesar FROM user");
                 $data = mysqli_fetch_array($querykode);
                 $id_user = $data['idterbesar'];
-                // mengambil angka dari kode user terbesar, menggunakan fungsi substr
-                // dan diubah ke integer dengan (int)
                 $urutan = (int) substr($id_user, 3, 3);
-                // bilangan yang diambil ini ditambah 1 untuk menentukan nomor urut berikutnya
                 $urutan++;
-                // membentuk kode user baru
-                // perintah sprintf("%03s", $urutan); berguna untuk membuat string menjadi 3 karakter
-                // misalnya perintah sprintf("%03s", 15); maka akan menghasilkan '015'
-                // angka yang diambil tadi digabungkan dengan kode huruf yang kita inginkan, misalnya BRG
                 $huruf = "USR";
                 $iduser = $huruf . sprintf("%03s", $urutan);
-
-                ?>
-                
+                ?>          
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="id_user" value="<?php echo $iduser ?>" readonly>
                         <div class="input-group-append">
