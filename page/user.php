@@ -2,12 +2,23 @@
   <div class="card-header">
     <h3 class="card-title">Data User</h3>
   </div>
+  <?php 
+                include 'koneksi.php';
+                $querykode = mysqli_query($koneksi, 
+                "SELECT max(id_user) as idterbesar FROM user");
+                $data = mysqli_fetch_array($querykode);
+                $id_user = $data['idterbesar'];
+                $urutan = (int) substr($id_user, 3, 3);
+                $urutan++;
+                $huruf = "USR";
+                $iduser = $huruf . sprintf("%03s", $urutan);
+                ?>
   <form action="proses/user.php?aksi=simpan" method="post" class="form-horizontal">
     <div class="card-body">
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">ID User</label>
         <div class="col-sm-10">
-          <input type="text" name="id_user" class="form-control">
+          <input type="text" name="id_user" value="<?php echo $iduser ?>" readonly class="form-control">
         </div>
       </div>
       <div class="form-group row">
@@ -52,7 +63,7 @@
 </div>
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">DataTable with default features</h3>
+    <h3 class="card-title">Data User</h3>
   </div>
 
   <div class="card-body">
@@ -63,6 +74,7 @@
           <th>ID User</th>
           <th>Nama</th>
           <th>username</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
@@ -75,6 +87,10 @@
           <td><?php echo $data['id_user'] ?></td>
           <td><?php echo $data['nama_user'] ?></td>
           <td><?php echo $data['username'] ?></td>
+          <td>
+            <a href="admin.php?page=edit_user&id_user=<?php echo $data['id_user'] ?>" class="btn btn-warning">Edit</a>
+            <a href="proses/user.php?aksi=delete&id_user=<?php echo $data['id_user'] ?>" class="btn btn-danger">Hapus</a>
+          </td>
         </tr>  
           
       <?php } ?>      
@@ -84,6 +100,7 @@
           <th>ID User</th>
           <th>Nama</th>
           <th>Username</th>
+          <th>Aksi</th>
         </tr>
       </tfoot>
     </table>
