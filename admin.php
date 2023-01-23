@@ -139,6 +139,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="admin.php?page=laporan" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Laporan
+                                    <span class="right badge badge-success">New</span>
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -197,6 +206,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     case 'transaksi':
                                         include "page/transaksi.php";
                                         break;
+                                    case 'laporan':
+                                    include "page/laporan.php";
+                                    break;
                                 }
                             }
                             ?>

@@ -28,8 +28,7 @@ switch($aksi){
     $filename = $_FILES['gambar']['name'];
     $newfilename = $rand.'_'.$filename;
     move_uploaded_file($_FILES['gambar']['tmp_name'], '../gambar/'.$rand.'_'.$filename);
-    $query = mysqli_query($koneksi,"UPDATE barang SET nama_barang = '$nama_barang', harga = '$harga', stok = '$stok',
-    gambar = '$newfilename' WHERE id_barang = '$id_barang'");
+    $query = mysqli_query($koneksi,"UPDATE barang SET nama_barang = '$nama_barang', harga = '$harga', stok = '$stok WHERE id_barang = '$id_barang'");
     header("location:../admin.php?page=barang");
     break;
   case 'delete':

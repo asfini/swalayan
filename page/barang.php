@@ -48,8 +48,8 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-info">Simpan</button>
-                <button type="reset" class="btn btn-default float-right">Reset</button></button>
+                <button type="reset" class="btn btn-default">Reset</button></button>
+                <button type="submit" class="btn btn-info  float-right">Simpan</button>
             </div>
         </div>
     </form>
