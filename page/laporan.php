@@ -2,8 +2,9 @@
     <div class="card-header">
         <h3 class="card-title">Data User</h3>
     </div>
-    <form action="" method="post" class="form-horizontal">
-        <div class="card-body">
+
+    <div class="card-body">
+        <form action="" method="post" class="form-horizontal">
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Tanggal</label>
                 <div class="col-sm-2">
@@ -16,27 +17,19 @@
                     <button type="submit" name="tampilkan" class="btn btn-info">Tampilkan</button>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
 
-
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Laporan User</h3>
-        </div>
-
-        <div class="card-body">
-            <table class=" table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>ID Transaksi</th>
-                        <th>Tanggal</th>
-                        <th>Barang</th>
-                        <th>Jumlah</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <?php
+        <table class=" table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID Transaksi</th>
+                    <th>Tanggal</th>
+                    <th>Barang</th>
+                    <th>Jumlah</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <?php
         include 'koneksi.php';
         if (isset($_POST["tampilkan"])) {
             $tanggal_awal = $_POST['tanggal_awal'];
@@ -47,26 +40,25 @@
         }
         while ($data = mysqli_fetch_array($query)) {
         ?>
-                <tbody>
-                    <tr>
-                        <td><?php echo $data['id_transaksi'] ?></td>
-                        <td><?php echo $data['tanggal'] ?></td>
-                        <td><?php echo $data['nama_barang'] ?></td>
-                        <td><?php echo $data['jumlah'] ?></td>
-                        <td><?php echo $data['total'] ?></td>
-                    </tr>
-                </tbody>
-                <?php } ?>
-                <tfoot>
-                    <tr>
-                        <th>ID Transaksi</th>
-                        <th>Tanggal</th>
-                        <th>Barang</th>
-                        <th>Jumlah</th>
-                        <th>Total</th>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
+            <tbody>
+                <tr>
+                    <td><?php echo $data['id_transaksi'] ?></td>
+                    <td><?php echo $data['tanggal'] ?></td>
+                    <td><?php echo $data['nama_barang'] ?></td>
+                    <td><?php echo $data['jumlah'] ?></td>
+                    <td><?php echo $data['total'] ?></td>
+                </tr>
+            </tbody>
+            <?php } ?>
+            <tfoot>
+                <tr>
+                    <th>ID Transaksi</th>
+                    <th>Tanggal</th>
+                    <th>Barang</th>
+                    <th>Jumlah</th>
+                    <th>Total</th>
+                </tr>
+            </tfoot>
+        </table>
     </div>
 </div>
