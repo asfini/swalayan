@@ -9,7 +9,7 @@
         
         <div class="col-sm-4">
           <?php $Now = new DateTime('now', new DateTimeZone('Asia/Taipei')); ?>
-          <input type="datetime-local" value="<?php echo $Now->format('Y-m-d 00:00:00'); ?>" step="1"  name="tanggal_awal" " class=" form-control">
+          <input type="datetime-local" step="1" value="<?php echo $Now->format('Y-m-d 00:00:00'); ?>"   name="tanggal_awal" " class=" form-control">
         </div>
         <div class="col-sm-4">
           <input type="datetime-local" step="1" value="<?php echo $Now->format('Y-m-d 23:59:59'); ?>"  name="tanggal_akhir" " class=" form-control">
