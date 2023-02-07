@@ -14,7 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Starter</title>
+    <title>App | Swalayan</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -139,6 +139,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="admin.php?page=laporan" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Laporan
+                                    <span class="right badge badge-success">New</span>
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -153,12 +162,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Starter Page</h1>
+                            <h1 class="m-0">Halaman Admin</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Starter Page</li>
+                                <li class="breadcrumb-item active">Halaman Admin</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -179,15 +188,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     case 'user':
                                         include "page/user.php";
                                         break;
+                                    case 'edit_user':
+                                    include "page/edit_user.php";
+                                        break;
                                     case 'pelanggan':
                                         include "page/pelanggan.php";
+                                        break;
+                                    case 'edit_pelanggan':
+                                    include "page/edit_pelanggan.php";
                                         break;
                                     case 'barang':
                                         include "page/barang.php";
                                         break;
+                                    case 'edit_barang':
+                                    include "page/edit_barang.php";
+                                        break;
                                     case 'transaksi':
                                         include "page/transaksi.php";
                                         break;
+                                    case 'laporan':
+                                    include "page/laporan.php";
+                                    break;
                                 }
                             }
                             ?>
@@ -253,19 +274,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
     });
-  });
+</script>
+
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 </script>
