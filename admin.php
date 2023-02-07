@@ -65,7 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="index3.html" class="brand-link">
                 <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">App Swalayan</span>
             </a>
 
             <!-- Sidebar -->
@@ -162,12 +162,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Halaman Admin</h1>
+                            <h1 class="m-0">Starter Page</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Halaman Admin</li>
+                                <li class="breadcrumb-item active">Starter Page</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -189,26 +189,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         include "page/user.php";
                                         break;
                                     case 'edit_user':
-                                    include "page/edit_user.php";
+                                        include 'page/edit_user.php';
                                         break;
                                     case 'pelanggan':
                                         include "page/pelanggan.php";
                                         break;
                                     case 'edit_pelanggan':
-                                    include "page/edit_pelanggan.php";
+                                        include "page/edit_pelanggan.php";
                                         break;
                                     case 'barang':
                                         include "page/barang.php";
                                         break;
                                     case 'edit_barang':
-                                    include "page/edit_barang.php";
+                                        include "page/edit_barang.php";
                                         break;
                                     case 'transaksi':
                                         include "page/transaksi.php";
                                         break;
                                     case 'laporan':
-                                    include "page/laporan.php";
-                                    break;
+                                        include "page/laporan.php";
+                                        break;
                                 }
                             }
                             ?>
@@ -274,25 +274,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script>
-    $(function () {
-        $("#example1").DataTable({
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
     });
+  });
 </script>
-
 <script type="text/javascript">
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -306,3 +303,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
         }
     }
 </script>
+Footer
+© 2023 GitHub, Inc.

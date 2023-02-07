@@ -1,13 +1,3 @@
-<?php 
-error_reporting(0);
-// mengaktifkan session php
-session_start();
-if($_SESSION['status'] =="login"){
-header("location:admin.php");
-}
-
-?>
-
 <?php
 error_reporting(0);
 session_start();
@@ -49,24 +39,11 @@ if ($_SESSION['status'] == "login") {
                 <?php 
                     if(isset($_GET['pesan'])){
                         if($_GET['pesan'] == "gagal"){
-                            echo "
-                            <div class='alert alert-danger' role='alert'>
-                                Login gagal! username dan password salah!
-                            </div>
-                            ";
+                            echo "Login gagal! username dan password salah!";
                         }else if($_GET['pesan'] == "logout"){
-                            echo "
-                            <div class='alert alert-warning' role='alert'>
-                                Anda telah berhasil logout
-                            </div>
-                            ";
+                            echo "Anda telah berhasil logout";
                         }else if($_GET['pesan'] == "belum_login"){
-                            echo "
-                            <div class='alert alert-success' role='alert'>
-                                Anda harus login untuk mengakses halaman admin
-                            </div>
-                            ";
-                            
+                            echo "Anda harus login untuk mengakses halaman admin";
                         }
                     }
                 ?>
